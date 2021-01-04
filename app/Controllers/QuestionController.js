@@ -3,9 +3,9 @@ import { questionService} from "../Services/QuestionService.js"
 
 function _draw(){
   let questions = ProxyState.questions
-  let template=''
+  let template='<ol>'
   questions.forEach(q=>(template += q.Template))
-  document.getElementById("show").innerHTML= template
+  document.getElementById("show").innerHTML= template +'</ol>'
 }
 
 export default class QuestionController{
